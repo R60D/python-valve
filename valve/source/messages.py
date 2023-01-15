@@ -4,7 +4,7 @@
 from __future__ import (absolute_import,
                         unicode_literals, print_function, division)
 
-import collections
+import collections.abc
 import struct
 
 import six
@@ -376,7 +376,7 @@ class MessageDictField(MessageArrayField):
         return entries_dict, buffer
 
 
-class Message(collections.Mapping):
+class Message(collections.abc.Mapping):
 
     fields = ()
 
